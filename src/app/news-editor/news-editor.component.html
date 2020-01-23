@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <h2>Dodaj swojego newsa</h2>
+  <form #myForm="ngForm" class="form">
+    <div class=" formItem">
+      <input class="input" type="text" [(ngModel)]="createdTitle" placeholder=" " name="title" />
+      <label class="label">
+        Tytuł:
+      </label>
+      <div class="formItemBar"></div>
+    </div>
+    <div class="formItem">
+      <input class="input" type="url" [(ngModel)]="addedUrl" placeholder=" " name="url" />
+      <label class="label">
+        Obrazek:
+      </label>
+      <div class="formItemBar"></div>
+    </div>
+    <div class="formItem">
+      <textarea class="textarea" [(ngModel)]="addedContent" placeholder=" " name="content"></textarea>
+      <label class="label">
+        Treść:
+      </label>
+      <div class="formItemBar"></div>
+    </div>
+    <button class="button" (click)="addNews()" [disabled]="!createdTitle">
+      dodaj
+    </button>
+  </form>
+</div>

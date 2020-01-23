@@ -1,0 +1,18 @@
+<div class="news-item">
+  <img [src]="news.imageUrl" />
+  <div class="content">
+    <h3>{{news.title}}</h3>
+    <p>{{news.content}}</p>
+  </div>
+  <div class="vote-delete">
+    <div class="vote">
+      <button class="voter" (click)="voteAdd()">+</button>
+      <p>{{news.id}}</p>
+      <button class="voter" (click)="voteSub()">-</button>
+    </div>
+    <button class="button" (click)="remove()">
+      usuń
+    </button>
+  </div>
+  <div class="clear"></div>
+</div>
